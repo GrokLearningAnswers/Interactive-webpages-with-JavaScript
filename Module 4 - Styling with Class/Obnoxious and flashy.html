@@ -1,0 +1,26 @@
+<style>
+  h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: rgb(255, 112, 23);
+  }
+
+  h1.flash {
+    background: rgb(255, 112, 23);
+    color: rgb(250, 216, 65);
+  }
+</style>
+
+<h1 id="title">...</h1>
+<input id="titleInput">
+
+<script>
+  // Put your code here
+  function update(){
+    title.textContent = titleInput.value;
+
+    title.classList.toggle("flash");
+  }
+
+  titleInput.oninput = update;
+</script>

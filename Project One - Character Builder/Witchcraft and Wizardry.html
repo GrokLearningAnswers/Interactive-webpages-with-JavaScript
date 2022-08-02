@@ -1,0 +1,77 @@
+<form id="characterForm">
+  <h1>Details</h1>
+  <p>
+    <label>
+      Name: <br>
+
+      <input id="nameInput">
+    </label>
+  </p>
+  <p>
+    <label id="gradeLabel">
+      Grade: <br>
+
+      <!-- Grade input goes here -->
+      <input id="gradeInput" type="range" min="1" max="7">
+    </label>
+  </p>
+  <p>
+    <label id="houseLabel">
+      Best attribute: <br>
+
+      <!-- Attribute select goes here -->
+      <select id="houseInput">
+        <option value="Slytherin">Ambitious</option>
+        <option value="Hufflepuff">Caring</option>
+        <option value="Gryffindor">Courageous</option>
+        <option value="Ravenclaw">Intelligent	</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      Favourite subject: <br>
+
+      <select id="subjectInput">
+        <option></option>
+        <option value="If they seem tired, it's because they've been up all night staring at the stars.">Astronomy</option>
+        <option value="They're very practical, and good to have if you're in a tight spot.">Charms</option>
+        <option value="Worried about danger? You'll always be safe around them.">Defence Against the Dark Arts</option>
+        <option value="Give it a few years and they'll be in the Quidditch League.">Flying</option>
+        <option value="They've got a green thumb, sometimes literally!">Herbology</option>
+        <option value="They're pleasant to talk to, if they ever get their head out of a book.">History of Magic</option>
+        <option value="Most often you can find them brewing concoctions in a cauldron.">Potions</option>
+        <option value="If you mess with them, prepare to be turned in to a newt.">Transfiguration</option>
+      </select>
+    </label>
+  </p>
+</form>
+
+<div>
+  <h1>Magical Internship Reference Letter</h1>
+  <p>
+    To whom it may concern,
+  </p>
+  <p>
+    <span id="charName"></span> is becoming accomplished in the arts of magic, having completed <span id="charGrade"></span> years at Hogwarts School of Witchcraft and Wizardry.
+    When they came to us, we were proud to place them in <span id="charHouse"></span> House and they've made substantial contributions therein.
+  </p>
+  <p id="charSubject"></p>
+  <p>
+    Regards,<br>
+    <em>Albus Dumbledore</em>
+  </p>
+</div>
+
+<script>
+  // Put your code here
+  function update(){
+    charHouse.textContent = houseInput.value;
+    charSubject.textContent = subjectInput.value;
+    charName.textContent = nameInput.value;
+    charGrade.textContent = gradeInput.value;
+  }
+
+  characterForm.onchange = update;
+  nameInput.oninput = update;
+</script>

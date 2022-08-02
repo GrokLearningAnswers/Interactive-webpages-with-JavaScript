@@ -1,0 +1,20 @@
+<p><em>The Animal of the day is...</em></p>
+<h1 id="day"></h1>
+<p id="message"></p>
+
+<input id="animal">
+
+<button id="button">
+    Update animal!
+</button>
+
+<script>
+    function clickAction() {
+        // Put your code here
+        day.textContent = animal.value;
+
+        message.textContent = "Good choice!";
+    }
+
+    button.onclick = clickAction;
+</script>

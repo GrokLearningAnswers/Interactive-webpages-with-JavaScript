@@ -1,0 +1,29 @@
+<style>
+  .green {
+    color: green;
+    text-shadow: 0 0 5px lime;
+  }
+  .big {
+    font-family: impact;
+    font-size: 4em;
+  }
+</style>
+
+<button id="greenButton">Make it green</button>
+<button id="bigButton">Make it big</button>
+<h1 id="heading">Green is good!</h1>
+
+<script>
+  // Put your code here
+  function onGreenButton(){
+    heading.classList.add("green")
+  }
+
+  function onBigButton(){
+    heading.classList.add("big")
+  }
+
+  greenButton.onclick = onGreenButton;
+  bigButton.onclick = onBigButton;
+
+</script>

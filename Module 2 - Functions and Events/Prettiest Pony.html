@@ -1,0 +1,28 @@
+<h1 style="color: purple;">The Prettiest Pony</h1>
+<p>
+  <label>
+    Colour: <input id="colourInput">
+  </label>
+</p>
+<p>
+  <label>
+    Verb: <input id="verbInput">
+  </label>
+</p>
+<p style="font-size: 32px;">
+  My pony is pretty, <span id="colour">colour</span><br>
+  and it loves <span id="verb">verb</span>.<br>
+  It's the best pony ever!
+</p>
+
+<script>
+  function inputAction() {
+    colour.textContent = colourInput.value;
+    // Verb setting code goes here
+    verb.textContent= verbInput.value;
+  }
+
+  colourInput.oninput = inputAction;
+  // Verb input code goes here
+  verbInput.oninput = inputAction;
+</script>

@@ -1,0 +1,18 @@
+<h1 id="heading">You should study.</h1>
+<label>
+  <input id="weekend" type="checkbox">
+  It's the weekend
+</label>
+
+<script>
+  function changeAction() {
+    heading.textContent = 'You should study.';
+
+    // Paste the example here
+    if (weekend.checked) {
+      heading.textContent = 'Do whatever!';
+    }
+  };
+
+  weekend.onchange = changeAction;
+</script>

@@ -1,0 +1,20 @@
+<p id="message"></p>
+<input id="messageInput">
+<button id="sendButton">
+    Send
+</button>
+
+<script>
+    function inputAction() {
+        message.textContent = '...';
+    }
+
+    // Your code here
+
+    function sendMessage(){
+        message.textContent = messageInput.value;
+    }
+
+    messageInput.oninput = inputAction;
+    sendButton.onclick = sendMessage;
+</script>

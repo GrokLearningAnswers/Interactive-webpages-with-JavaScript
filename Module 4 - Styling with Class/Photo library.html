@@ -1,0 +1,25 @@
+<style>
+  body {
+    margin: 0 60px;
+  }
+  img.focus {
+    transform: scale(1.25);
+  }
+</style>
+
+<h1 id="heading">Photo Library</h1>
+<div id="library">
+  <img src="doggo1.jpg" width="200" height="300" alt="Fluffy happy boy">
+  <img src="doggo2.jpg" width="450" height="300" alt="Little flower pupper">
+  <img src="doggo3.jpg" width="450" height="300" alt="Wise old doggo">
+  <img src="doggo4.jpg" width="200" height="300" alt="Tiny fluffy pup">
+</div>
+
+<script>
+  // Put your code here
+  function clickAction(event) {
+    event.target.classList.toggle('focus');
+  }
+  library.onmouseover = clickAction;
+  library.onmouseout = clickAction;
+</script>

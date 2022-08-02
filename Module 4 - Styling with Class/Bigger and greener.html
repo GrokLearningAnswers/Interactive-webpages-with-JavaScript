@@ -1,0 +1,41 @@
+<style>
+    .green {
+        color: green;
+        text-shadow: 0 0 5px lime;
+    }
+    .big {
+        font-family: impact;
+        font-size: 4em;
+    }
+</style>
+
+<p>
+    <label><input type="checkbox" id="greenCheckbox"> Green</label>
+</p>
+<p>
+    <label><input type="checkbox" id="bigCheckbox"> Big</label>
+</p>
+<h1 id="heading">Green is good!</h1>
+
+<script>
+    // Put your code here
+    function greenFunction(){
+        if(greenCheckbox.checked){
+            heading.classList.add('green')
+        }
+        else{
+            heading.classList.remove('green')
+        }
+    }
+    function bigFunction(){
+        if(bigCheckbox.checked){
+            heading.classList.add('big')
+        }
+        else{
+            heading.classList.remove('big')
+        }
+    }
+    greenCheckbox.onchange = greenFunction;
+    bigCheckbox.onchange = bigFunction;
+
+</script>

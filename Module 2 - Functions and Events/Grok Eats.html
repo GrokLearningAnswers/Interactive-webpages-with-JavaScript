@@ -1,0 +1,38 @@
+<h1>Grok Eats</h1>
+
+<p>
+  <label id="amountLabel">
+
+    <!-- Put the number input here -->
+    <input id="amountInput" type="number">
+    × Pad Thai
+  </label>
+
+  <label id="proteinLabel">
+    with
+
+    <!-- Put the select here -->
+    <select id="proteinSelect">
+      <option value="Chicken">Chicken</option>
+      <option value="Beef">Beef</option>
+      <option value="Tofu">Tofu</option>
+      <option value="Vegetable">Vegetable</option>
+    </select>
+  </label>
+</p>
+
+<p>
+  <span id="amount">0</span> Pad Thai with <span id="protein">Chicken</span>
+</p>
+
+<script>
+
+  // Put your JavaScript here
+  function update(){
+    amount.textContent = amountInput.value;
+    protein.textContent = proteinSelect.value;
+  }
+
+  amountInput.oninput = update;
+  proteinSelect.onchange = update;
+</script>

@@ -1,0 +1,29 @@
+<style>
+  .correct {
+    color: green;
+    font-family: cursive;
+  }
+</style>
+
+<p style="width: 400px;"><strong>What is the scientific name of the western lowland gorilla?</strong></p>
+<input id="answer">
+<button id="button">Check answer</button>
+<h1 id="result">...</h1>
+
+<script>
+  // Put your code here
+  function onButton(){
+    result.textContent = "Nope!";
+
+    if(answer.value == "gorilla gorilla gorilla"){
+      result.textContent = "You got it!";
+      result.classList.add('correct');
+    }
+    else if(answer.value == ''){
+      result.textContent = "...";
+    }
+  }
+
+
+  button.onclick = onButton;
+</script>

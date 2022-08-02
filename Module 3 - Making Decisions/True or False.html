@@ -1,0 +1,38 @@
+<p>
+  <strong>Sloths have the slowest metabolism of any animal.</strong>
+</p>
+<p>
+  <label>
+    <!-- Add radio button here -->
+    <input type="radio" name="answer" value="true" id="correct">
+    True
+  </label>
+</p>
+<p>
+  <label>
+    <!-- Add radio button here -->
+    <input type="radio" name="answer" value="false">
+    False
+  </label>
+</p>
+<button id="button">
+  Check answer
+</button>
+<h1 id="result">...</h1>
+
+<script>
+  // Put your code here
+  function changeAction() {
+    result.textContent = '';
+
+    if(correct.checked){
+      result.textContent = "You got it!";
+    }
+    else{
+      result.textContent = "Nope!";
+    }
+  }
+
+  button.onclick = changeAction;
+
+</script>

@@ -1,0 +1,29 @@
+<h1 id="score">00</h1>
+<h2 id="player">Name</h2>
+<p>
+  <label id="playerLabel">
+    Name:
+
+    <!-- Name input here -->
+    <input id="playerInput">
+  </label>
+</p>
+<p>
+  <label id="scoreLabel">
+    Score:
+
+    <!-- Score input here -->
+    <input type="range" id="scoreInput" max="99">
+  </label>
+</p>
+<script>
+
+  // Put your code here
+  function update(){
+    score.textContent = scoreInput.value;
+    player.textContent = playerInput.value;
+  }
+
+  scoreInput.oninput = update;
+  playerInput.oninput = update;
+</script>

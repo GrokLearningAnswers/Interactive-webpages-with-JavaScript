@@ -1,0 +1,27 @@
+<h1>Grok Pizza</h1>
+<p>
+  <label>
+    What pizza would you like?<br>
+    <select id="pizza">
+      <option value="Pepperoni">Pepperoni</option>
+      <option value="Cheese">Cheese</option>
+      <option value="Vegetarian">Vegetarian</option>
+    </select>
+  </label>
+</p>
+<button id="button">
+  Order
+</button>
+<h2 id="order"></h2>
+
+<script>
+  // Put your code here
+  function changeAction(){
+    order.textContent = "On the way!";
+    if (pizza.value == 'Cheese') {
+      order.textContent = "Good choice! On the way!";
+    }
+  }
+
+  button.onclick = changeAction;
+</script>

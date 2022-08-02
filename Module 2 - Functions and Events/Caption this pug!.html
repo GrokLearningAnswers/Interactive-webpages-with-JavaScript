@@ -1,0 +1,16 @@
+<h1 style="font-family: serif;">The Doggy Herald</h1>
+<input id="input">
+
+<figure>
+  <img src="pug.jpg">
+  <figcaption>
+    <h3 id="caption"></h3>
+  </figcaption>
+</figure>
+
+<script>
+  function inputAction() {
+    caption.textContent = input.value;
+  }
+  input.oninput = inputAction;
+</script>

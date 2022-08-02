@@ -1,0 +1,43 @@
+<style>
+    #bomb .after {
+        display: none;
+    }
+
+    #bomb.big {
+        font-size: 3em;
+    }
+
+    #bomb.bigger {
+        font-size: 4em;
+    }
+
+    #bomb.exploded .after {
+        display: inline;
+    }
+
+    #bomb.exploded .before {
+        display: none;
+    }
+</style>
+
+<h1 id="bomb">
+    <span class="before">💣</span>
+    <span class="after">💥</span>
+</h1>
+
+<script>
+    // Put your code here
+    function update(){
+        if(!bomb.classList.contains("big")){
+            bomb.classList.add("big");
+        }
+        else if(!bomb.classList.contains("bigger")){
+            bomb.classList.add("bigger");
+        }
+        else if(!bomb.classList.contains("exploded")){
+            bomb.classList.add("exploded");
+        }
+    }
+
+    bomb.onclick = update;
+</script>
